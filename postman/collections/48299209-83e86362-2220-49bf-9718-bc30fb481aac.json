@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "48299209-83e86362-2220-49bf-9718-bc30fb481aac",
+		"name": "user crreate with gemvc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"item": [
+				{
+					"name": "index",
+					"id": "48299209-3d3eb7ef-14a2-41b2-bc6c-36acfa938c6e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/index/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index",
+								"index"
+							]
+						},
+						"description": "test if Gemvc successfully installed and Swoole Server running"
+					},
+					"response": []
+				}
+			],
+			"id": "48299209-04b3952c-eb17-487a-ae1a-a0d0770ec0b7"
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create",
+					"id": "48299209-5692c4b6-105f-4038-b91c-b8eb56e57fc1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "text",
+									"description": "Type: string (Required)"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"description": "Type: string (Required)"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text",
+									"description": "Type: string (Required)"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						},
+						"description": "Create new User in database"
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"id": "48299209-83feeda8-85e6-4b0a-bcc5-bafdaa053c78",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/read",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"read"
+							]
+						},
+						"description": "Get User by id from database"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"id": "48299209-1ba02fc2-0dca-4b02-a328-9d59fc1763f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "Type: int (Required)"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
+									"description": "Type: string"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						},
+						"description": "Update existing User in database"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"id": "48299209-67ea49b5-6186-43fd-8d86-cc6737d3062a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "Type: int (Required)"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/user/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						},
+						"description": "Delete User from database"
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"id": "48299209-17e27ae9-cf16-4738-8ef3-7525be244582",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						},
+						"description": "Get list of all Users with filtering and sorting"
+					},
+					"response": []
+				}
+			],
+			"id": "48299209-fb4e7ff7-2e11-424d-aef9-3449609be049"
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
